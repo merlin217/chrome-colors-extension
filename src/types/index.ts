@@ -3,7 +3,15 @@ export enum Sender {
   Content,
 }
 
+export interface Palette {
+  name: string;
+  background: string[];
+  text: string[];
+  button: string[];
+  highlight: string[];
+}
+
 export interface ChromeMessage {
   from: Sender;
-  color?: String;
+  palette?: Palette;
 }

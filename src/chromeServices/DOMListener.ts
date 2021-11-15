@@ -1,4 +1,6 @@
-import { ChromeMessage, Sender } from "../types";
+import { ChromeMessage, Palette, Sender } from "../types";
+
+import { injectStyle } from "./injectStyle.js";
 
 const messagesFromReactAppListener = (
   message: ChromeMessage,
@@ -8,9 +10,9 @@ const messagesFromReactAppListener = (
   if (
     sender.id === chrome.runtime.id &&
     message.from === Sender.React &&
-    message.color
+    message.palette
   ) {
-    document.body.style.backgroundColor = message.color.toLowerCase();
+    injectStyle(message.palette);
   }
 };
 
