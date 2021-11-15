@@ -45,22 +45,22 @@ function App() {
           <Button
             color={"#889200"}
             text={"Theme 1"}
-            //onclick={}      // function call to set theme 1
+            onClick={() => setColor("#889200")} 
           />
           <Button
             color={"#76b08e"}
             text={"Theme 2"}
-            //onclick={}      // function call to set theme 2
+            onClick={() => setColor("#76b08e")} 
           />
           <Button
             color={"gray"}
             text={"Theme 3"}
-            //onclick={}      // function call to set theme 3
+            onClick={() => setColor("gray")} 
           />
           <Button
             color={"purple"}
             text={"Theme 4"}
-            //onclick={}      // function call to set theme 4
+            onClick={() => setColor("purple")} 
           />
         </div>
       </div>
