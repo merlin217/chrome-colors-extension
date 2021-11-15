@@ -1,10 +1,11 @@
-import "./App.css";
+import "./style/style.css";
 
 import { ChromeMessage, Sender } from "./types";
 
 import Button from "./components/Button";
+import Header from "./components/Header";
 import React from "react";
-import logo from "./logo.svg";
+import ToggleButton from "./components/ToggleButton";
 
 function App() {
   const [color, setColor] = React.useState("");
@@ -36,28 +37,33 @@ function App() {
 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <Button
-          border="none"
-          color="red"
-          height="30px"
-          onClick={() => setColor("red")}
-          radius="5px"
-          width="30px"
-        />
-        <Button
-          border="none"
-          color="green"
-          height="30px"
-          onClick={() => setColor("green")}
-          radius="5px"
-          width="30px"
-        />
-      </header>
+      <Header />
+      <div className="container">
+        <ToggleButton />
+
+        <div className="btn-themes">
+          <Button
+            color={"#889200"}
+            text={"Theme 1"}
+            //onclick={}      // function call to set theme 1
+          />
+          <Button
+            color={"#76b08e"}
+            text={"Theme 2"}
+            //onclick={}      // function call to set theme 2
+          />
+          <Button
+            color={"gray"}
+            text={"Theme 3"}
+            //onclick={}      // function call to set theme 3
+          />
+          <Button
+            color={"purple"}
+            text={"Theme 4"}
+            //onclick={}      // function call to set theme 4
+          />
+        </div>
+      </div>
     </div>
   );
 }
